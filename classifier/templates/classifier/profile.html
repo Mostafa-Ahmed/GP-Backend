@@ -1,0 +1,9 @@
+{%  extends 'classifier/base.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block body %}
+    {% for image in Images %}
+        <a href="{% url 'classifier:get-image' image.pk %}"><img alt="{{ image.date }}-{{ image.side }}" title="{{ image.date }}-{{ image.side }}" src="{{ image.image.url }}" width="50px" height="50px"></a>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'classifier/base.html' %}
+
+{% block title %} User Details {% endblock %}
+
+{% block body %}
+
+    <img alt="{{ image.date }}-{{ image.side }}"
+         title="{{ image.date }}-{{ image.side }}"
+         src="{{ image.image.url }}"
+         width="100px" height="100px">
+    <ul>
+        <li>{{ image.data }}</li>
+        <li>{{ image.side }}</li>
+        <li>{{ image.stage }}</li>
+    </ul>
+{% endblock %}
